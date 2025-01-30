@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ammu's Kitchen</title>
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <header>
+    <nav>
+      <div class="logo">
+        <h1>Ammu's Kitchen</h1>
+      </div>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#" id="orderBtn">Order Online</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <h2>Welcome to Ammu's Kitchen</h2>
+    <p>Delicious, home-cooked meals just a click away.</p>
+    <a href="#menu" class="btn">Explore Menu</a>
+  </section>
+
+  <!-- Menu Section -->
+  <section id="menu">
+    <h2>Our Menu</h2>
+    <div class="menu-items">
+      <div class="menu-item">
+        <img src="https://www.thespruceeats.com/thmb/QjCQ4RTjmnhrovGkuJWzZCXYFX8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-90053856-588b7aff5f9b5874ee534b04.jpg" alt="Dish 1">
+        <h3>Ice cream</h3>
+        <p>Delicious description of the dish.</p>
+        <button class="order-btn" onclick="openOrderPopup('Dish Name')">Order Now</button>
+      </div>
+      <div class="menu-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT_IEgB9tx1Y0zZmQYP5ykaaxv4EWYD5mekA&s." alt="Dish 2">
+        <h3>Cakes </h3>
+        <p>Delicious description of the dish.</p>
+        <button class="order-btn" onclick="openOrderPopup('Dish Name')">Order Now</button>
+      </div>
+      <!-- Add more items as needed -->
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Have any questions? Reach out to us!</p>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Order Popup -->
+  <div id="orderPopup" class="popup">
+    <div class="popup-content">
+      <h3>Order Your Dish</h3>
+      <p id="dishNamePopup"></p>
+      <form id="orderForm">
+        <input type="number" placeholder="Quantity" required>
+        <input type="text" placeholder="Your Address" required>
+        <input type="phone" placeholder="Phone Number" required>
+        <button type="submit">Place Order</button>
+      </form>
+      <button id="closePopup" onclick="closeOrderPopup()">Close</button>
+    </div>
+  </div>
+
+  <script src="script1.js"></script>
+</body>
+</html>
